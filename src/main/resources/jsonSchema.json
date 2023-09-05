@@ -1,0 +1,111 @@
+{
+  "title": "jsonC",
+  "description": "Auto generated JSON schema based on the 'jsonC' file",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "type": "string"
+        },
+        "query": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "current": {
+      "type": "object",
+      "properties": {
+        "weather_descriptions": {
+          "type": "array",
+          "items": {}
+        },
+        "observation_time": {
+          "type": "string"
+        },
+        "wind_degree": {
+          "type": "number"
+        },
+        "visibility": {
+          "type": "number"
+        },
+        "weather_icons": {
+          "type": "array",
+          "items": {}
+        },
+        "feelslike": {
+          "type": "number"
+        },
+        "is_day": {
+          "type": "string"
+        },
+        "wind_dir": {
+          "type": "string"
+        },
+        "pressure": {
+          "type": "number"
+        },
+        "cloudcover": {
+          "type": "number"
+        },
+        "precip": {
+          "type": "number"
+        },
+        "uv_index": {
+          "type": "number"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "humidity": {
+          "type": "number"
+        },
+        "wind_speed": {
+          "type": "number"
+        },
+        "weather_code": {
+          "type": "number"
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "localtime": {
+          "type": "string"
+        },
+        "utc_offset": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "localtime_epoch": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "timezone_id": {
+          "type": "string"
+        },
+        "lon": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

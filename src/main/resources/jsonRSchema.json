@@ -1,0 +1,24 @@
+{
+  "title": "jsonR",
+  "description": "Auto generated JSON schema based on the 'jsonR' file",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        },
+        "info": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
