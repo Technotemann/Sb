@@ -57,7 +57,7 @@ public class ApiTests {
                 .extract()
                 .response();
         assertThat(response.jsonPath().get("error.code"), equalTo(101));
-        Allure.addAttachment("Негативный запрос 1 успешен", response.body().prettyPrint());
+        Allure.addAttachment("Ответ", response.body().prettyPrint());
     }
 
     @Test
@@ -72,6 +72,7 @@ public class ApiTests {
                 .extract()
                 .response();
         assertThat(response.jsonPath().get("error.code"), equalTo(105));
+        Allure.addAttachment("Ответ", response.body().prettyPrint());
     }
 
     @Test
@@ -86,6 +87,7 @@ public class ApiTests {
                 .extract()
                 .response();
         assertThat(response.jsonPath().get("error.code"), equalTo(603));
+        Allure.addAttachment("Ответ", response.body().prettyPrint());
     }
 
     @Test
@@ -100,5 +102,6 @@ public class ApiTests {
                 .extract()
                 .response();
         assertThat(response.jsonPath().get("error.code"), equalTo(615));
+        Allure.addAttachment("Ответ", response.body().prettyPrint());
     }
 }

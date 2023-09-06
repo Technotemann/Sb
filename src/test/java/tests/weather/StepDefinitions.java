@@ -50,13 +50,14 @@ public class StepDefinitions {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         dateFormat.setTimeZone(TimeZone.getTimeZone(jsonResponse.getString("location.timezone_id")));
-        Allure.addAttachment("Ожидаемое значение location.localtime" + dateFormat.format(date), jsonResponse.getString("location.localtime"));
+        Allure.addAttachment("Ожидаемое значение location.localtime: " + dateFormat.format(date), jsonResponse.getString("location.localtime"));
     }
 
     @Then("сравнить значение узла {string} последнего результата запроса погоды в городе {string} с параметром {string}")
     public void validateSingleValue(String path, String city, String value) {
         JsonPath jsonResponse = responseHashMap.get(city).jsonPath();
         Allure.addAttachment("Ожидаемое значение " + path + ": " + value, jsonResponse.getString(path));
+        System.out.println(path + ": " + value.equals(jsonResponse.getString(path)));
     }
 
     @Then("выполнить запрос {string} с ожиданием кода ответа {int}")

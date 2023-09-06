@@ -6,7 +6,7 @@
 
     <groupId>Weather</groupId>
     <artifactId>WeatherApi</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
 
     <properties>
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
@@ -17,6 +17,10 @@
         <allure.version>2.24.0</allure.version>
         <rest-assured.version>5.3.1</rest-assured.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version>
+        <org.slf4j.version>2.0.9</org.slf4j.version>
+        <javax.xml.bind.version>2.3.1</javax.xml.bind.version>
+        <jupiter-engine.plugin.version>5.7.2</jupiter-engine.plugin.version>
+        <allure.plugin.version>2.12.0</allure.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -62,7 +66,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.9</version>
+            <version>${org.slf4j.version}</version>
         </dependency>
 
         <dependency>
@@ -74,7 +78,7 @@
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <version>${javax.xml.bind.version}</version>
         </dependency>
 
         <dependency>
@@ -154,7 +158,7 @@
                     <dependency>
                         <groupId>org.junit.jupiter</groupId>
                         <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.7.2</version>
+                        <version>${jupiter-engine.plugin.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>org.aspectj</groupId>
@@ -172,7 +176,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.12.0</version>
+                <version>${allure.plugin.version}</version>
                 <configuration>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                     <reportVersion>${allure.version}</reportVersion>
