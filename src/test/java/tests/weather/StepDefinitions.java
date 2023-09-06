@@ -57,7 +57,9 @@ public class StepDefinitions {
     public void validateSingleValue(String path, String city, String value) {
         JsonPath jsonResponse = responseHashMap.get(city).jsonPath();
         Allure.addAttachment("Ожидаемое значение " + path + ": " + value, jsonResponse.getString(path));
-        System.out.println(path + ": " + value.equals(jsonResponse.getString(path)));
+        if (!value.equals(jsonResponse.getString(path))) {
+            System.out.println(path + ": " + jsonResponse.getString(path) + " ≠ " + value);
+        }
     }
 
     @Then("выполнить запрос {string} с ожиданием кода ответа {int}")
